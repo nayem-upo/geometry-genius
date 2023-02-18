@@ -113,7 +113,10 @@ document.getElementById('ellipse-calculate').addEventListener('click', function 
     const ellipseLength = getInputValueById('ellipse-length');
     const ellipseArea = 3.1416 * ellipseLand * ellipseLength;
     const ellipseAreaOutput = document.getElementById('ellipse-area');
-    
+    if (isNaN(ellipseArea)) {
+        alert('Please fill both inputs with valid numbers')
+        return;
+    }
     if (ellipseArea < 0) {
         alert('Input should be positive number')
         return;
