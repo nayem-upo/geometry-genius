@@ -1,3 +1,4 @@
+// reuseable function 1 to get element's innertext
 function getTextElementValueById(elementId) {
     const TotalElement = document.getElementById(elementId);
     const currentTotalString = TotalElement.innerText;
@@ -5,6 +6,7 @@ function getTextElementValueById(elementId) {
     return currentTotal;
 }
 
+// reuseable function 2 to get input's values
 function getInputValueById(inputId) {
     const mainField = document.getElementById(inputId);
     const FieldString = mainField.value;
@@ -12,6 +14,8 @@ function getInputValueById(inputId) {
     mainField.value = '';
     return inputField;
 }
+
+// triangle calculation 
 let triangle = ["1. Triangle "];
 document.getElementById('triangle-calculate').addEventListener('click', function () {
     const triangleLand = getInputValueById('triangle-land');
@@ -30,6 +34,7 @@ document.getElementById('triangle-calculate').addEventListener('click', function
     triangleAreaOutput.innerText = triangle + triangleArea + " " + "㎠";
 })
 
+// rectangle calculation
 let rectangle = ["2. Rectangle "];
 document.getElementById('rectangle-calculate').addEventListener('click', function () {
     const rectangleWidth = getInputValueById('rectangle-width');
@@ -47,6 +52,7 @@ document.getElementById('rectangle-calculate').addEventListener('click', functio
     rectangleAreaOutput.innerText = rectangle + rectangleArea + " " + "㎠";
 })
 
+// parallelogram calculation
 let parallelogram = ["3. Parallelogram "];
 document.getElementById('parallelogram-calculate').addEventListener('click', function () {
     const parallelogramLand = getInputValueById('parallelogram-land');
@@ -64,6 +70,7 @@ document.getElementById('parallelogram-calculate').addEventListener('click', fun
     parallelogramAreaOutput.innerText = parallelogram + parallelogramArea + " " + "㎠" ;
 })
 
+// rhombus calculation
 let rhombus = ["4. Rhombus "];
 document.getElementById('rhombus-calculate').addEventListener('click', function () {
     const rhombusd1 = getInputValueById('rhombus-d1');
@@ -80,6 +87,8 @@ document.getElementById('rhombus-calculate').addEventListener('click', function 
     }
     rhombusAreaOutput.innerText = rhombus + rhombusdArea + " " + "㎠" ;
 })
+
+// pentagon calculation
 let pentagon = ["5. Pentagon "];
 document.getElementById('pentagon-calculate').addEventListener('click', function () {
     const pentagonArmNumber = getInputValueById('pentagon-arm-number');
@@ -97,6 +106,7 @@ document.getElementById('pentagon-calculate').addEventListener('click', function
     pentagonAreaOutput.innerText = pentagon + pentagonArea + " " + "㎠" ;
 })
 
+// ellipse calculation
 let ellipse = ["6. Ellipse "];
 document.getElementById('ellipse-calculate').addEventListener('click', function () {
     const ellipseLand = getInputValueById('ellipse-land');
@@ -112,5 +122,64 @@ document.getElementById('ellipse-calculate').addEventListener('click', function 
         return;
     }
     ellipseAreaOutput.innerText = ellipse + ellipseArea.toFixed(2) + " " + "㎠" ;
+})
+
+// random color functions
+
+const triangleColor = document.getElementById("triangle-random-colors");   
+triangleColor.addEventListener('mouseover', function () {
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+    triangleColor.style.backgroundColor = bgColor;
+})
+
+
+const rectangleColor = document.getElementById("rectangle-random-colors");   
+rectangleColor.addEventListener('mouseover', function () {
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+    rectangleColor.style.backgroundColor = bgColor;
+})
+
+const parallelogramColor = document.getElementById("parallelogram-random-colors");   
+parallelogramColor.addEventListener('mouseover', function () {
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+    parallelogramColor.style.backgroundColor = bgColor;
+})
+
+const rhombusColor = document.getElementById("rhombus-random-colors");   
+rhombusColor.addEventListener('mouseover', function () {
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+    rhombusColor.style.backgroundColor = bgColor;
+})
+
+
+const pentagonColor = document.getElementById("pentagon-random-colors");   
+pentagonColor.addEventListener('mouseover', function () {
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+    pentagonColor.style.backgroundColor = bgColor;
+})
+
+
+const ellipseColor = document.getElementById("ellipse-random-colors");   
+ellipseColor.addEventListener('mouseover', function () {
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+    ellipseColor.style.backgroundColor = bgColor;
 })
 
